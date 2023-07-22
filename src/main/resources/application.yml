@@ -1,0 +1,20 @@
+server:
+    port: 8888
+spring:
+    security:
+        user:
+            name: subhash
+            password: subhash
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/subhash30897/spring-cloudconfig-blr
+                    search-paths:
+                    - station*
+                    repos:
+                        perf:
+                            pattern: '*/perf'
+                            uri: https://github.com/subhash30897/spring-cloudconfig-blr-perf
+                            search-paths:
+                            - 'station*'
